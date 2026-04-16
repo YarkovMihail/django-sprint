@@ -47,9 +47,11 @@ posts = [
 def index(request):
     return render(request, 'index.html', {'posts': posts})
 
+
 def post_detail(request, id):
     post = posts[id]
     return render(request, 'detail.html', {'post': post})
+
 
 def category_posts(request, category_slug):
     return render(request, 'category.html', {'category_slug': category_slug})
